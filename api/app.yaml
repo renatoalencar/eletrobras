@@ -1,0 +1,6 @@
+runtime: custom
+env: flex
+service: default
+entrypoint: gunicorn -b :8080 main:app
+env_variables:
+  ENVIRONMENT: 'production'

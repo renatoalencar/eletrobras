@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  web:
+    build: .
+    command: pipenv run python3 main.py
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: '8080'
+      ENVIRONMENT: 'development'
+    volumes:
+      - '.:/usr/src/app'
